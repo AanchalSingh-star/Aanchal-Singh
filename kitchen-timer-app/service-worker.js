@@ -1,16 +1,3 @@
-// self.addEventListener("install", function(event) {
-//   event.waitUntil(
-//     caches.open("kitchen-timer-cache").then(function(cache) {
-//       return cache.addAll([
-//         "/",
-//         "/index.html",
-//         "/style.css",
-//         "/script.js"
-//       ]);
-//     })
-//   );
-// });
-
 const CACHE_NAME = "kitchen-timer-cache";
 const urlsToCache = [
 "/",
@@ -50,4 +37,5 @@ self.addEventListener("fetch", event => {
     return fetch(event.request);
     })
   );
+
 });
