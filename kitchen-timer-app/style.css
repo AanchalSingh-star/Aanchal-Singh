@@ -1,0 +1,73 @@
+body {
+  font-family: Arial;
+  text-align: center;
+  background-color: #fff7e6;
+  padding-top: 100px;
+}
+
+h1 {
+  font-size: 40px;
+}
+
+button {
+  padding: 15px 25px;
+  margin: 10px;
+  font-size: 18px;
+  border-radius: 10px;
+  border: none;
+  background-color: orange;
+  color: white;
+  cursor: pointer;
+  transition: transform 0.2s;
+  width:90%;
+  max-width:250px;
+}
+
+button:hover {
+  background-color: darkorange;
+  transform: scale(1.1);
+}
+
+#timer {
+  margin-top: 40px;
+  font-size: 30px;
+}
+
+.progress-bar {
+  width: 300px;
+  height: 20px;
+  background: #eee;
+  margin: 20px auto;
+  border-radius: 10px;
+}
+
+#progress {
+  height: 100%;
+  width: 0%;
+  background: orange;
+  border-radius: 10px;
+  transition: width 1s linear;
+}
+
+#foodItem{
+font-size:50px;
+margin:20px;
+transition:transform 0.3s;
+}
+
+@keyframes bounce{
+0%{transform:translateY(0)}
+50%{transform:translateY(-6px)}
+100%{transform:translateY(0)}
+}
+
+.cooking{
+animation:bounce 1s infinite;
+}
+
+#timer-buttons{
+display:flex;
+flex-wrap:wrap;
+justify-content:center;
+gap:10px;
+}
