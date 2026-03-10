@@ -1,0 +1,238 @@
+body{
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  background-color:#fff7e6;
+  margin:0;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  min-height:100vh;
+  text-align: center;
+}
+
+.app-container{
+  padding:30px;
+  width:90%;
+  max-width:900px;   /* allow expansion */
+}
+
+h1 {
+  font-size: 40px;
+}
+
+button {
+  padding: 15px 25px;
+  margin: 10px;
+  font-size: 18px;
+  border-radius: 10px;
+  border: none;
+  background-color: orange;
+  color: white;
+  cursor: pointer;
+  transition: transform 0.15s, box-shadow 0.15s;
+  width:90%;
+  max-width:250px;
+}
+
+button:disabled{
+  background:#ccc;
+  cursor:not-allowed;
+}
+
+button:hover {
+  background-color: darkorange;
+  transform:translateY(-2px);
+  box-shadow:0 4px 10px rgba(0,0,0,0.15);
+}
+
+button:active{
+  transform:scale(0.97);
+}
+
+#status{
+  margin-top:25px;
+  font-weight: bold;
+}
+
+#timer{
+  margin-top:20px;
+  font-size:clamp(32px,6vw,48px);
+}
+
+.progress-bar{
+  width:100%;
+  height:20px;
+  background:#eee;
+  margin:15px auto;
+  border-radius:10px;
+}
+
+#progress {
+  height: 100%;
+  width: 0%;
+  background: orange;
+  border-radius: 10px;
+  transition: width 1s linear;
+}
+
+#foodItem{
+  font-size:50px;
+  margin:20px;
+  transition:transform 0.3s;
+}
+
+@keyframes bounce{
+  0%{transform:translateY(0)}
+  50%{transform:translateY(-6px)}
+  100%{transform:translateY(0)}
+}
+
+.cooking{
+  animation:bounce 1s infinite;
+}
+
+#timer-buttons{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(120px,140px));
+  gap:16px;
+  margin-top:40px;
+  justify-content:center;
+  padding: 0 16px;
+}
+
+.controls{
+  margin-top:15px;
+  display:flex;
+  justify-content:center;
+  gap:20px;
+}
+
+.controls button{
+  width:30px;
+  height:40px;
+  border-radius:30%;
+  font-size:15px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+}
+
+.food-card{
+  background:white;
+  border-radius:16px;
+  width:120px;
+  padding:15px;
+  cursor:pointer;
+  box-shadow:0 4px 10px rgba(0,0,0,0.15);
+  transition:transform 0.15s, box-shadow 0.15s;
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+}
+
+.food-card:hover{
+  transform:translateY(-4px);
+  box-shadow:0 6px 18px rgba(0,0,0,0.2);
+}
+
+.food-icon{
+  font-size:32px;
+  margin-bottom:8px;
+}
+
+.food-name{
+  font-size:16px;
+  font-weight:600;
+}
+
+
+@media (min-width: 700px){
+
+  .app-container{
+    display:grid;
+    grid-template-columns: 1fr 2fr;
+    gap:40px;
+
+    width:90%;
+    max-width:1500px;
+
+    background:white;
+    padding:40px;
+    border-radius:20px;
+    box-shadow:0 10px 30px rgba(0,0,0,0.15);
+  }
+
+  .left-panel{
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    text-align:center;
+    background-color:#fff7e6;
+  }
+
+  .logo-area{
+    font-size:90px;
+  }
+
+  .logo-area h1{
+    font-size:28px;
+    margin-top:10px;
+  }
+
+  .right-panel{
+    text-align:center;
+    align-items: center;
+  }
+
+  .food-card{
+    align-items: center;      
+  }
+  
+  #timer-buttons{
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  #timer{
+    font-size:40px;
+    margin:15px 0;
+  }
+
+  .controls button{
+    width:70px;
+    height:70px;
+    font-size:26px;
+  }
+
+  .food-card{
+    min-height:100px;
+  }
+
+  #foodItem{
+    font-size:60px;
+  }
+
+  .progress-bar{
+    width:100%;
+    max-width:500px;
+    margin:20px auto;
+  }
+}
+
+@media (max-width:700px){
+
+  .app-container{
+    grid-template-columns:1fr;
+    gap:20px;
+    padding:25px;
+  }
+
+  .logo-area{
+    font-size:10px;
+  }
+
+  .logo-area img{
+    width: 100%;
+    max-width: 450px;
+    height: auto;
+  }
+
+}

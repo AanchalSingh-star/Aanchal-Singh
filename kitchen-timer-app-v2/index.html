@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Kitchen Timer</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="manifest" href="manifest.json">
+</head>
+
+<body>
+  <div class="app-container">
+    <div class="left-panel">
+      <div class="logo-area">
+          <h1><img src="homePageLogo.png"></h1>
+      </div>
+    </div>
+    <div class="right-panel">
+      
+      <h3><b>Select a food item to time</b></h3>
+
+      <div id="timer-buttons"></div>
+
+      <p id="status">The kitchen is idle</p>
+      <div id="foodItem">👩🏼‍🍳</div>
+      <h2 id="timer">00:00</h2>
+
+      <div class="progress-bar">
+        <div id="progress"></div>
+      </div>
+
+      <div class="controls">
+        <button id="pauseBtn" onclick="pauseTimer()" disabled>⏸</button>
+        <button id="resumeBtn" onclick="resumeTimer()" disabled>▶</button>
+        <button onclick="resetTimer()">🔄</button>
+      </div>
+    </div>
+  </div>
+
+<audio id="alarm" src="alarm.mp3"></audio>
+<script src="script.js"></script>
+
+</body>
+</html>
